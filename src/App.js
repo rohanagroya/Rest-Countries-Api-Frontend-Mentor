@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/Header";
+import Countries from "./components/Countries"
+import { Routes, Route } from 'react-router-dom'
+import CountryDetails from "./components/CountryDetails";
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [theme, setTheme] = useState("dark-theme")
+
+  const toggleTheme = () => {
+    theme == "dark-theme" ? (setTheme("light-theme")) : (setTheme("dark-theme"));
+  }
+
+  console.log(theme)
+  
+  return(
+    <div className={`App ${theme}`}>
+      <Header toggleTheme={toggleTheme} theme={theme}/>
+      <Routes>
+        <Route path='/' element={<Countries/>} />
+        <Route path='/:capital' element={<CountryDetails/>} />
+      </Routes>
     </div>
   );
 }

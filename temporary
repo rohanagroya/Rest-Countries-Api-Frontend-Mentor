@@ -1,0 +1,38 @@
+bg
+elements
+font
+values
+
+Dark mode - Default 
+-dark-mode-elements:hsl(209, 23%, 22%);
+-dark-mode-background:hsl(207, 26%, 17%);
+-dark-mode-text:white;
+-dark-mode-values-text:hsl(200, 15%, 8%);
+
+Light mode - Default 
+-light-mode-elements:white;
+-light-mode-background:hsl(0, 0%, 98%);
+-light-mode-text:hsl(200, 15%, 8%);
+-light-mode-values-text:hsl(200, 15%, 8%);
+-light-mode-input:hsl(0, 0%, 52%);
+
+
+homepagefont:14px
+detailpagefont:16px
+- Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+font-family: 'Nunito Sans', sans-serif;
+- Weights: 300, 600, 800
+
+- Mobile: 375px
+- Desktop: 1440px max-width
+
+
+components - 
+header
+filter
+countries
+country-detaisl
+
+pages - 
+Homepage - header,filter,countries
+countrydeatils - header,counry
